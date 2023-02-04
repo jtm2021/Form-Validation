@@ -1,7 +1,7 @@
 # Form-Validation
 A form validation project to showcase knowledge on the use of HTML forms. This is part of the Brainnest Advanced Front-End Development Training
 
-![Mockup Screenshot](###)
+![Mockup Screenshot](./assets/readme-images/mockup.png)
 
 - The live site can be found [here](https://jtm2021.github.io/Form-Validation/).
 - The source code can be found [here](https://github.com/jtm2021/Form-Validation).
