@@ -157,10 +157,19 @@ span {
 }
 
 #pwd_strength {
+  visibility: hidden;
   font-size: 12px;
   display: inline;
   font: black;
 }
+
+.item-password > div {
+  display: inline;
+}
+.item-password  strong {
+  visibility: hidden;
+}
+
 
 /* Thank You Page */
 .thanks-grid {

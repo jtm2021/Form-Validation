@@ -69,7 +69,7 @@ const check_first_name = () => {
   return check_input(
     inputFirstName,
     spanFirstName,
-    /^(?=.{3,50}$)^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]*$/,
+    /^(?=.{3,50}$)^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~- ]*$/,
     'First name is invalid'
   );
 }
@@ -78,7 +78,7 @@ const check_last_name = () => {
   return check_input(
     inputLastName,
     spanLastName,
-    /^(?=.{3,50}$)^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]*$/,
+    /^(?=.{3,50}$)^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~- ]*$/,
     'Last name is invalid.'
   );
 }
@@ -87,8 +87,8 @@ const check_email = () => {
   return check_input(
     inputEmail,
     spanEmail,
-    /^(?=.{0,100}$)^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-    'Invalid is email'
+    /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+    'Email is invalid'
   );
 }
 
@@ -157,7 +157,9 @@ myForm.addEventListener('submit', (e) => {
   if (!check_phone()) okProceed = false;
   if (!check_password()) okProceed = false;
   
-  return false;
+  if (okProceed)
+    myForm.submit();
+
 });
 
 
