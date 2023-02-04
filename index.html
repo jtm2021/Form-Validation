@@ -29,33 +29,33 @@
 
     <form action="./thanks.html" class="form-grid" id="myForm">
       <div class="item-fname">
-        <label for="f-name">FIRST NAME</label>
+        <label for="f-name">* FIRST NAME</label>
         <input id="f-name" name="first-name" type="text" />
         <span id="first-name-error">.</span>
       </div>
     
       <div class="item-lname">
-        <label for="l-name">LAST NAME</label>
+        <label for="l-name">* LAST NAME</label>
         <input id="l-name" name="last-name" type="text" />
         <span id="last-name-error">.</span>
       </div>
     
       <div class="item-email">
-        <label for="email">EMAIL</label>
+        <label for="email">* EMAIL</label>
         <input id="email" name="email" type="email" />
         <span id="email-error">.</span>
       </div>
     
       <div class="item-phone">
-        <label for="phone">PHONE</label>
+        <label for="phone">* PHONE</label>
         <input id="phone" name="phone" type="tel" />
         <span id="phone-error">.</span>
       </div>
     
       <div class="item-password">
-        <label style="display:inline" for="password">PASSWORD</label>
-        <div id="pwd_strength">
-          <strong>Strength:</strong>
+        <label for="password">* PASSWORD</label>
+        <div>
+          <strong id="pwd_strength">Strength:</strong>
           <span id="pwd_strength_msg"></span>
         </div>
         <input id="password" name="password" type="password" maxlength="20" />
@@ -63,7 +63,7 @@
       </div>
     
       <div class="item-c-password">
-        <label for="c-password">CONFIRM PASSWORD</label>
+        <label for="c-password">* CONFIRM PASSWORD</label>
         <input id="c-password" name="password" type="password" />
       </div>
       

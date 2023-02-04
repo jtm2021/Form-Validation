@@ -88,7 +88,7 @@ const check_email = () => {
     inputEmail,
     spanEmail,
     /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
-    'Invalid is email'
+    'Email is invalid'
   );
 }
 
@@ -158,7 +158,7 @@ myForm.addEventListener('submit', (e) => {
   if (!check_password()) okProceed = false;
   
   if (okProceed)
-  myForm.submit();
+    myForm.submit();
 
 });
 
