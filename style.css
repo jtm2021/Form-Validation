@@ -14,11 +14,12 @@ body {
     "sidebar header header"
     "sidebar form form"
     "sidebar form form";
+    grid-template-rows: 1.8fr 3fr 2fr;
 }
 
 .sidebar {
   grid-area: sidebar;
-  background-image: url("./assets/beach.jpg");
+  background-image: url("./assets/images-icons/beach.jpg");
   background-size: cover;
   background-position: center;
  /* background-image: url("./assets/images-icons/beach.jpg"); */
@@ -116,7 +117,8 @@ input {
   border-style: solid;
   border-width: 1px;
   border-radius: 5px;
-  font-size: 22px;
+  /* font-size: 22px; */
+  height: 1.5rem;
   width: 100%;
 }
 
