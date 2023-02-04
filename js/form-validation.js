@@ -69,7 +69,7 @@ const check_first_name = () => {
   return check_input(
     inputFirstName,
     spanFirstName,
-    /^(?=.{3,50}$)^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~- ]*$/,
+    /^(?=.{3,50}$)^[a-zA-Z0-9.!#$%&‘*+/=?^_ `{|}~-]*$/,
     'First name is invalid'
   );
 }
@@ -78,7 +78,7 @@ const check_last_name = () => {
   return check_input(
     inputLastName,
     spanLastName,
-    /^(?=.{3,50}$)^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~- ]*$/,
+    /^(?=.{3,50}$)^[a-zA-Z0-9.!#$%&‘*+/=?^_ `{|}~-]*$/,
     'Last name is invalid.'
   );
 }
