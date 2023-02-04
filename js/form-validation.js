@@ -98,7 +98,7 @@ const check_phone = () => {
     spanPhone,
     // /\(?([0-9\(-)]{3})\)?([ .-]?)([0-9-]{3})\2([0-9-]{4})/,
     /\(?([0-9\(-)])/,
-    'Phone number is invalid.'
+    'Phone number is invalid. Only numbers, spaces and hyphen are allowed'
   );
 }
 
