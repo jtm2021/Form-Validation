@@ -73,11 +73,14 @@ body {
 .form-grid {
   grid-area: form;
   display: grid;
+  grid-template-rows: 20% 20% 20% 40%;
+  grid-template-columns: 45% 45% ;
   grid-template-areas:
     "fname lname ..."
     "email phone ..."
     "password c-password ..."
     "account account account";
+
 }
 
 .form-grid>div {
@@ -114,10 +117,9 @@ body {
 }
 
 input {
-  border-style: solid;
+  border: 2px solid black;
   border-width: 1px;
   border-radius: 5px;
-  /* font-size: 22px; */
   height: 1.5rem;
   width: 100%;
 }
