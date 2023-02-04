@@ -96,8 +96,8 @@ const check_phone = () => {
   return check_input(
     inputPhone,
     spanPhone,
-    /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/,
-    'Phone is invalid (10 caracters)'
+    /\(?([0-9\(-)]{3})\)?([ .-]?)([0-9-]{3})\2([0-9-]{4})/,
+    'Phone number is invalid.'
   );
 }
 
