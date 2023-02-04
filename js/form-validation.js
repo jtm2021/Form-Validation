@@ -87,7 +87,7 @@ const check_email = () => {
   return check_input(
     inputEmail,
     spanEmail,
-    /^(?=.{0,100}$)^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+    /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
     'Invalid is email'
   );
 }
@@ -157,7 +157,9 @@ myForm.addEventListener('submit', (e) => {
   if (!check_phone()) okProceed = false;
   if (!check_password()) okProceed = false;
   
-  return false;
+  if (okProceed)
+  myForm.submit();
+
 });
 
 
