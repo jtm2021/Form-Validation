@@ -132,6 +132,11 @@ const setPassWordStrenght = () => {
 
 const check_password = () => {
   let isPwdValid = true;
+  let passwd =  inputPwd.value;
+  if (!passwd){
+    change_input_display(inputPwd,spanPsw,"Password is required.")
+    return false
+  }
   if (!setPassWordStrenght()) {
     change_input_display(inputPwd,spanPsw,"Password strength should be good or strong.")
     isPwdValid = false;
