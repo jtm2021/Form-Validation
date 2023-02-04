@@ -15,23 +15,23 @@ const pswStrength = document.getElementById("pwd_strength");
 const pswStrengthMsg = document.getElementById("pwd_strength_msg");
 
 const LEVELS = {
-  0: {
-    color: '#E0E0DE',
+  1: {
+    color: '#ACADA8',
     msg: "Too short"
   },
-  1: {
+  2: {
     color: '#C92E28',
     msg: "weak"
   },
-  2: {
+  3: {
     color: '#F1C74F',
     msg: "Fair"
   },
-  3: {
+  4: {
     color: '#7A9CBF',
     msg: "Good"
   },
-  4: {
+  5: {
     color: '#1F6C1E',
     msg: "Strong"
   }
@@ -69,7 +69,7 @@ const check_first_name = () => {
   return check_input(
     inputFirstName,
     spanFirstName,
-    /^(?=.{3,50}$)^[a-zA-Z0-9.!#$%&‘*+/=?^_ `{|}~-]*$/,
+    /^(?=.{2,50}$)^[a-zA-Z.!#$%&‘*+/=?^_ `{|}~-]*$/,
     'First name is invalid'
   );
 }
@@ -78,7 +78,7 @@ const check_last_name = () => {
   return check_input(
     inputLastName,
     spanLastName,
-    /^(?=.{3,50}$)^[a-zA-Z0-9.!#$%&‘*+/=?^_ `{|}~-]*$/,
+    /^(?=.{2,50}$)^[a-zA-Z.!#$%&‘*+/=?^_ `{|}~-]*$/,
     'Last name is invalid.'
   );
 }
@@ -97,7 +97,7 @@ const check_phone = () => {
     inputPhone,
     spanPhone,
     /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/,
-    'Phone is invalid'
+    'Phone is invalid (10 caracters)'
   );
 }
 
@@ -107,21 +107,24 @@ const setPassWordStrenght = () => {
 
   change_input_display(inputPwd,spanPsw, "")
 
-  if (passwd.length > 5 && passwd.length <= 25 ) {
+  if (passwd.length > 0 && passwd.length <= 25 ) {
     if( /[`˜!@#$%ˆ&*()_\-\\ \^ \$\*\+\?\.\(\)\|\{\}\[\]]/.test(passwd)) score ++;
     if (/[a-z]/.test(passwd)) score ++;
     if (/[A-Z]/.test(passwd)) score ++;
     if (/[0-9]/.test(passwd)) score ++;
+    if (passwd.length > 8)score ++;
+    if (passwd.length > 10)score ++;
 
     pswStrength.style.visibility = "visible";
     pswStrengthMsg.style.visibility = "visible";
+
+    pswStrengthMsg.innerText = LEVELS[score].msg;
+    pswStrengthMsg.style.color = LEVELS[score].color;
   } else {
     pswStrengthMsg.style.visibility = "hidden";
     pswStrength.style.visibility = "hidden";
   }
 
-  pswStrengthMsg.innerText = LEVELS[score].msg;
-  pswStrengthMsg.style.color = LEVELS[score].color;
 
   return score > 2 ?  true : false;
 }
