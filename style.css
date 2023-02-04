@@ -21,6 +21,7 @@ body {
   background-image: url("./assets/beach.jpg");
   background-size: cover;
   background-position: center;
+ /* background-image: url("./assets/images-icons/beach.jpg"); */
 }
 
 .site-name {
@@ -159,6 +160,19 @@ span {
   font: black;
 }
 
+/* Thank You Page */
+.thanks-grid {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.thanks-grid div {
+    text-align: center;
+}
+
+/* Mobile */
 @media screen and (max-width: 800px) {
   .grid-container {
     grid-template-areas:
