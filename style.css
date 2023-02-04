@@ -2,136 +2,162 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
 
 body {
-    padding: 0;
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
 }
 
 .grid-container {
-    display: grid;
-    grid-template-areas: 
+  display: grid;
+  grid-template-areas:
     "sidebar header header"
     "sidebar form form"
     "sidebar form form";
-    grid-template-rows: 1.8fr 3fr 2fr;
 }
 
 .sidebar {
-    grid-area: sidebar;
-    background-image: url("./assets/images-icons/beach.jpg");
-    background-size: cover;
-    background-position: center;
+  grid-area: sidebar;
+  background-image: url("./assets/beach.jpg");
+  background-size: cover;
+  background-position: center;
+ /* background-image: url("./assets/images-icons/beach.jpg"); */
 }
 
 .site-name {
-    color: white;
-    font-size: 1.5rem;
-    font-family: 'Fredericka the Great', sans-serif;
-    text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  font-family: 'Fredericka the Great', sans-serif;
+  text-align: center;
 }
 
 .site-name-container {
-    background-color: rgba(104, 103, 106, 0.6); ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem 0 1rem;
-    position: relative;
-    top: 30%;
+  background-color: rgba(104, 103, 106, 0.6);
+  ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0 1rem;
+  position: relative;
+  top: 30%;
 }
 
 .header {
-    grid-area: header;
-    display: grid;
-    padding: 3rem;
-    background-color: #c1c2c2;
+  grid-area: header;
+  display: grid;
+  padding: 1rem;
+  background-color: #c1c2c2;
 }
 
 .header h1 {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .form {
-    grid-area: form;
-    display: grid;
-    grid-template-areas:
+  grid-area: form;
+  display: grid;
+  grid-template-areas:
     "action"
     "form";
-    grid-template-rows: 1fr 5fr;
+  grid-template-rows: 1fr 5fr;
 }
 
 .action-msg {
-    grid-area: action;
-    font-size: 1.5rem;
-    padding-left: 3rem;
+  grid-area: action;
+  font-size: 1.5rem;
+  padding-left: 3rem;
 }
 
 .form-grid {
-    grid-area: form;
-    display: grid;
-    grid-template: 1fr 1fr 1fr 1.5fr 2.5fr / 1fr 1fr 1fr;
-    grid-template-areas:
+  grid-area: form;
+  display: grid;
+  grid-template-areas:
     "fname lname ..."
     "email phone ..."
     "password c-password ..."
-    "... ... ..."
     "account account account";
 }
 
-
-.form-grid > div {
-    padding-left: 3rem;
+.form-grid>div {
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 .item-fname {
-    grid-area: fname;
+  grid-area: fname;
 }
+
 .item-lname {
-    grid-area: lname;
+  grid-area: lname;
 }
+
 .item-email {
-    grid-area: email;
+  grid-area: email;
 }
+
 .item-phone {
-    grid-area: phone;
+  grid-area: phone;
 }
+
 .item-password {
-    grid-area: password;
+  grid-area: password;
 }
+
 .item-c-password {
-    grid-area: c-password;
+  grid-area: c-password;
 }
+
 .account {
-    grid-area: account;
+  grid-area: account;
 }
 
 input {
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    height: 1.5rem;
-    width: 100%;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  font-size: 22px;
+  width: 100%;
 }
 
 .form-grid .account {
-    grid-area: account;
-    padding: 30px 3rem;
-    background-color: #c1c2c2;
-    margin: 0 0;
+  grid-area: account;
+  padding: 30px 3rem;
+  background-color: #c1c2c2;
+  margin: 0 0;
 }
 
 button {
-    background-color: #81bde8;
-    color: black;
-    border: none;
-    padding: 8px 40px;
-    text-align: center;
-    font-size: 16px;
-    border-radius: 10px;
-    text-decoration: none;
-    cursor: pointer;
-    font-weight: bold;
+  background-color: #81bde8;
+  color: black;
+  border: none;
+  padding: 8px 40px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.input_invalid {
+  border: 2px solid red;
+}
+
+.input_valid {
+  border: 2px solid green;
+}
+
+span {
+  visibility: hidden;
+  font-size: .9em;
+  color: red;
+}
+
+#pwd_strength {
+  font-size: 12px;
+  display: inline;
+  font: black;
 }
 
 /* Thank You Page */
@@ -148,51 +174,50 @@ button {
 
 /* Mobile */
 @media screen and (max-width: 800px) {
+  .grid-container {
+    grid-template-areas:
+      "sidebar"
+      "header"
+      "form";
+    grid-template-rows: 1.8fr 3fr 2fr;
+    grid-template-columns: 1fr;
+  }
 
-    .grid-container {
-        grid-template-areas: 
-        "sidebar"
-        "header"
-        "form";
-        grid-template-rows: 1.8fr 3fr 2fr;
-        grid-template-columns: 1fr;
-    }
+  .sidebar {
+    height: 30vh;
+  }
 
-    .sidebar {
-        height: 30vh;
-    }
+  .header {
+    padding: 2rem;
+  }
 
-    .header {
-        padding: 2rem;
-    }
+  .header h1 {
+    font-size: 1.2rem;
+  }
 
-    .header h1 {
-        font-size: 1.2rem;
-    }
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
 
-    .form {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-    }
+  .action-msg {
+    text-align: center;
+    padding: .5em 0 ;
+  }
 
-    .action-msg {
-        padding-left: 0;
-        text-align: center;
-    }
+  .form-grid {
+    display: flex;
+    flex-direction: column;
+  }
 
-    .form-grid {
-        display: flex;
-        flex-direction: column;
-    }
+  .form-grid>div {
+    margin: 10px;
+    padding: 0 1rem;
+  }
 
-    .form-grid > div {
-        margin:10px;
-        padding: 0 1rem;
-    }
-
-    .form-grid .account {
-        text-align: center;
-        margin-top: 1.5rem;
-    }
+  .form-grid .account {
+    text-align: center;
+    margin-top: 1.5rem;
+  }
 }

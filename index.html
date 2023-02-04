@@ -2,63 +2,78 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/images-icons/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./style.css">
-    <title>Paradisiac Island</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./assets/images-icons/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./js/form-validation.js" defer></script>
+  <title>Paradisiac Island</title>
 </head>
 
 <body class="grid-container">
-    <section class="sidebar">
-        <div class="site-name-container">
-            <img src="./assets/images-icons/site-logo.png" width="80px" height="80px">
-            <p class="site-name">PARADISIAC ISLAND</p>
+  <section class="sidebar">
+    <div class="site-name-container">
+      <img src="./assets/site-logo.png" width="80px" height="80px">
+      <p class="site-name">PARADISIAC ISLAND</p>
+    </div>
+  </section>
+
+  <section class="header">
+    <h1> Do you want to want to get the best trip to a paradisiac island? Sign up <em>now</em> to get started. <br>
+      <br> You know you want to.
+    </h1>
+  </section>
+
+  <section class="form">
+    <p class="action-msg">Let's do this!</p>
+
+    <form action="./thanks.html" class="form-grid" id="myForm">
+      <div class="item-fname">
+        <label for="f-name">FIRST NAME</label>
+        <input id="f-name" name="first-name" type="text" />
+        <span id="first-name-error">.</span>
+      </div>
+    
+      <div class="item-lname">
+        <label for="l-name">LAST NAME</label>
+        <input id="l-name" name="last-name" type="text" />
+        <span id="last-name-error">.</span>
+      </div>
+    
+      <div class="item-email">
+        <label for="email">EMAIL</label>
+        <input id="email" name="email" type="email" />
+        <span id="email-error">.</span>
+      </div>
+    
+      <div class="item-phone">
+        <label for="phone">PHONE</label>
+        <input id="phone" name="phone" type="tel" />
+        <span id="phone-error">.</span>
+      </div>
+    
+      <div class="item-password">
+        <label style="display:inline" for="password">PASSWORD</label>
+        <div id="pwd_strength">
+          <strong>Strength:</strong>
+          <span id="pwd_strength_msg"></span>
         </div>
-    </section>
-    <section class="header">
-        <h1>
-            Do you want to want to get the best trip to a paradisiac island? Sign up <em>now</em> to get started.
-            <br>
-            <br>
-            You know you want to.
-        </h1>
-    </section>
-    <section class="form">
-        <p class="action-msg">Let's do this!</p>
-        <form action="./thanks.html" class="form-grid">
-            <div class="item-fname">
-                <label for="f-name">FIRST NAME</label>
-                <input id="f-name" name="first-name" type="text" required />
-            </div>
-            <div class="item-lname">
-                <label for="l-name">LAST NAME</label>
-                <input id="l-name" name="last-name" type="text" required />
-            </div>
-            <div class="item-email">
-                <label for="email">EMAIL</label>
-                <input id="email" name="email" type="email" pattern="[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-z]{2,4}+\.[a-z]{2,4}"
-                    title="Please enter a valid email address." required />
-            </div>
-            <div class="item-phone">
-                <label for="phone">PHONE</label>
-                <input id="phone" name="phone" type="number" required />
-            </div>
-            <div class="item-password">
-                <label for="password">PASSWORD</label>
-                <input id="password" name="password" type="password" required />
-            </div>
-            <div class="item-c-password">
-                <label for="c-password">CONFIRM PASSWORD</label>
-                <input id="c-password" name="password" type="password" required />
-            </div>
-            <div class="account">
-                <button>Create Account</button>
-                <p>Already have an account? Log in</p>
-            </div>
-        </form>
-    </section>
+        <input id="password" name="password" type="password" maxlength="20" />
+        <span id="password-error">.</span>
+      </div>
+    
+      <div class="item-c-password">
+        <label for="c-password">CONFIRM PASSWORD</label>
+        <input id="c-password" name="password" type="password" />
+      </div>
+      
+      <div class="account">
+        <button>Create Account</button>
+        <p>Already have an account? Log in</p>
+      </div>
+    </form>
+  </section>
 </body>
 
 </html>
