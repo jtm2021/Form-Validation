@@ -70,7 +70,7 @@ const check_first_name = () => {
     inputFirstName,
     spanFirstName,
     /^(?=.{2,50}$)^[a-zA-Z.!#$%&‘*+/=?^_ `{|}~-]*$/,
-    'First name is invalid'
+    'First name is invalid. Only letters, spaces and hyphen are allowed'
   );
 }
 
@@ -79,7 +79,7 @@ const check_last_name = () => {
     inputLastName,
     spanLastName,
     /^(?=.{2,50}$)^[a-zA-Z.!#$%&‘*+/=?^_ `{|}~-]*$/,
-    'Last name is invalid.'
+    'Last name is invalid. Only letters, spaces and hyphen are allowed'
   );
 }
 
