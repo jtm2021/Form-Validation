@@ -34,12 +34,11 @@ body {
 
 .site-name-container {
   background-color: rgba(104, 103, 106, 0.6);
-  ;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  padding: 1rem 0 1rem;
+  padding: 1rem 1.5rem 1rem;
   position: relative;
   top: 30%;
 }
