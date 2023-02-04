@@ -117,13 +117,14 @@ const setPassWordStrenght = () => {
 
     pswStrength.style.visibility = "visible";
     pswStrengthMsg.style.visibility = "visible";
+
+    pswStrengthMsg.innerText = LEVELS[score].msg;
+    pswStrengthMsg.style.color = LEVELS[score].color;
   } else {
     pswStrengthMsg.style.visibility = "hidden";
     pswStrength.style.visibility = "hidden";
   }
 
-  pswStrengthMsg.innerText = LEVELS[score].msg;
-  pswStrengthMsg.style.color = LEVELS[score].color;
 
   return score > 2 ?  true : false;
 }
