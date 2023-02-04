@@ -3,7 +3,8 @@ A form validation project to showcase knowledge on the use of HTML forms. This i
 
 ![Mockup Screenshot](###)
 
-The live site can be found [here](https://jtm2021.github.io/Form-Validation/).
+- The live site can be found [here](https://jtm2021.github.io/Form-Validation/).
+- The source code can be found [here](https://github.com/jtm2021/Form-Validation).
 
 ## Wireframe
 The wireframe for the project was made using [Figma](https://www.figma.com/).
