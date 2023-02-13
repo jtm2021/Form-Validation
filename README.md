@@ -26,7 +26,7 @@ The project used Roboto and Fredericka fonts from [Google Fonts](https://fonts.g
 
 The images used in the project were taken from [Pexels](https://www.pexels.com/).
 
-The logo was taken from [Pngfind](https://www.pngfind.com/download/hhhRobi_australian-australia-tourism-cartoon-free-photo-png-cartoon/)
+The logo was taken from [Pngfind](https://www.pngfind.com/download/hhhRobi_australian-australia-tourism-cartoon-free-photo-png-cartoon/).
 
 
 ## Contributors
